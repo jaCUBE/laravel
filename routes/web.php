@@ -2,7 +2,7 @@
 
 Route::get('/', 'PostsController@index');
 Route::get('/posts', 'PostsController@index');
-// Route::get('/posts/{post}', 'PostsController@show');
+Route::get('/posts/{id}', 'PostsController@show')->where('id', '[0-9]+'); // ID as a number
 Route::get('/posts/create', 'PostsController@create');
 Route::post('/posts', 'PostsController@store');
 

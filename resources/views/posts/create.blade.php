@@ -13,7 +13,6 @@
     <div class="form-group">
       <label for="title">Title:</label>
       <input type="text" id="title" name="title" class="form-control" placeholder="Post title">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-group">
       <label for="body">Body</label>
