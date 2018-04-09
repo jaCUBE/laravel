@@ -10,11 +10,11 @@
       
       
       <ul>
-          <?php foreach($tasks as $task){ ?>
+          <?php foreach($tasks as $task): ?>
           <li>
             <?= $task ?>
           </li>        
-        <?php } ?>
+        <?php endforeach; ?>
       </ul>
     </body>
 </html>
