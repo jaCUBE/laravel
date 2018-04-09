@@ -1,5 +1,6 @@
-<footer class="footer">
+<footer class="py-5 bg-dark">
   <div class="container">
-    <span class="text-muted">&copy; 2018</span>
+    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
   </div>
+  <!-- /.container -->
 </footer>
