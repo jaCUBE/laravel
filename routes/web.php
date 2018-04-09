@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $tasks = [
+        'Clean the house',
+        'Learn Laravel',
+        'Get a job'
+    ];
+    
+    $name = 'Jakub';
+  
+    return view('welcome', compact('tasks', 'name'));
 });
