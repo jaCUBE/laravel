@@ -12,12 +12,8 @@
 */
 
 Route::get('/', function () {
-    $tasks = [
-        'Clean the house',
-        'Learn Laravel',
-        'Get a job'
-    ];
-    
+    $tasks = DB::table('tasks')->latest()->get();
+          
     $name = 'Jakub';
   
     return view('welcome', compact('tasks', 'name'));
