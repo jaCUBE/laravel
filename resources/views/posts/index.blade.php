@@ -10,6 +10,12 @@
         <h2 class="card-title">{{$post->title}}</h2>
         <p class="card-text">{{$post->body}}</p>
         <a href="posts/{{$post->id}}" class="btn btn-primary">Read More →</a>
+        
+        <form method="post" action="posts/{{$post->id}}">
+          @csrf
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+        </form>
       </div>
       <div class="card-footer text-muted">
         Posted on January 1, 2017 by

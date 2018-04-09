@@ -8,7 +8,7 @@
   <hr />
   
   <form method="post" action="/posts">
-    {{ csrf_field() }}
+    @csrf
     
     <div class="form-group">
       <label for="title">Title:</label>

@@ -35,17 +35,7 @@ class PostsController extends Controller
     
     
     public function store()
-    {
-      // dd(request()->all());
-      // dd(request(['title', 'body']));
-      
-      /*
-      $post = new Post;
-      $post->title = request('title');
-      $post->body = request('body');
-      $post->save();
-       */
-      
+    {      
       $this->validate(request(), [
          'title' => 'required',
           'body' => 'required'
@@ -55,6 +45,17 @@ class PostsController extends Controller
       
       return redirect('/');
     }
+    
+    
+    
+    
+    public function delete($id)
+    {
+      Post::find($id)->find($id)->delete();
+      return redirect('/');
+    }
+    
+    
     
     
 }
