@@ -5,11 +5,13 @@
 @section('content')
   @foreach($posts as $post)
     <div class="card mb-4">
-      <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+      <img class="card-img-top" src="http://placehold.it/750x60" alt="Card image cap">
       <div class="card-body">
-        <h2 class="card-title">{{$post->title}}</h2>
+        <h2 class="card-title">
+          <a href="/posts/{{$post->id}}">{{$post->title}}</a>
+        </h2>
         <p class="card-text">{{$post->body}}</p>
-        <a href="posts/{{$post->id}}" class="btn btn-primary">Read More →</a>
+        <a href="/posts/{{$post->id}}" class="btn btn-primary">Read More →</a>
         
         <form method="post" action="posts/{{$post->id}}">
           @csrf
@@ -18,8 +20,11 @@
         </form>
       </div>
       <div class="card-footer text-muted">
-        Posted on January 1, 2017 by
-        <a href="#">Start Bootstrap</a>
+        Posted on
+        <span title="{{ $post->created_at }}">
+          {{ $post->created_at->toFormattedDateString() }} by
+        </span>
+        <a href="#">laravel.placeholder</a>
       </div>
     </div>      
   @endforeach

@@ -4,6 +4,8 @@
 
   <h2>{{ $post->title }}</h2>
 
+  <img src="http://placehold.it/750x130" alt="Card image cap">
+  
   <div class="text">
     {{ $post->body }}
   </div>
