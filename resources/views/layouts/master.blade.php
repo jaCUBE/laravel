@@ -9,7 +9,8 @@
       <link  rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css" />    
       <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>     
       
-      <link  rel="stylesheet" type="text/css" href="http://laravel.local/css/app.css?v=<?= time() ?>" />  
+      <link  rel="stylesheet" type="text/css" href="/css/app.css?v=<?= time() ?>" />  
+      <script src="/js/app.js?v=<?= time() ?>"></script>
     </head>
     
     
