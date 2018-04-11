@@ -9,3 +9,5 @@ Route::delete('/posts/{id}', 'PostsController@delete')->where('id', '[0-9]+'); /
 
 Route::get('/tasks', 'TasksController@index');
 Route::get('/tasks/{task}', 'TasksController@show');
+
+Route::post('/posts/{id}/comments', 'CommentsController@store')->where('id', '[0-9]+'); // ID as a number

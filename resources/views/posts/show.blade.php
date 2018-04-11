@@ -2,7 +2,7 @@
 
 @section('content')
 
-  <h2>{{ $post->title }}</h2>
+  <h2 xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">{{ $post->title }}</h2>
 
   <img src="http://placehold.it/750x130" alt="Card image cap">
   
@@ -24,10 +24,14 @@
   </div>
 
   <hr />
+
+  @include('comments.form')
+
+  <hr />
   
   <form method="post" action="">
     @csrf
     <input type="hidden" name="_method" value="DELETE">
-    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+    <button type="submit" class="btn btn-sm btn-danger">Delete post</button>
   </form>
 @endsection

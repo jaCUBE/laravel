@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
 use App\Post;
 
 class PostsController extends Controller
@@ -54,7 +55,7 @@ class PostsController extends Controller
       Post::find($id)->find($id)->delete();
       return redirect('/');
     }
-    
+
     
     
     
