@@ -7,7 +7,7 @@ use App\Post;
 class PostsController extends Controller
 {
   
-  
+  // @TODO edit this
     public function index()
     {
       $posts = Post::latest()->get();
