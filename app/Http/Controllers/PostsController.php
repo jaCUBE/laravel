@@ -7,8 +7,12 @@ use App\Post;
 
 class PostsController extends Controller
 {
-  
-  // @TODO edit this
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index', 'show']);
+    }
+
+    // @TODO edit this
     public function index()
     {
       $posts = Post::latest()->get();
@@ -41,8 +45,12 @@ class PostsController extends Controller
          'title' => 'required',
           'body' => 'required'
       ]);
-      
-      Post::create (request(['title', 'body']));
+
+      Post::create([
+          'title' => request('title'),
+          'body' => request('body'),
+          'user_id' => auth()->id() // Helper for auth()->user()->id
+      ]);
       
       return redirect('/');
     }

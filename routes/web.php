@@ -16,5 +16,5 @@ Route::post('/posts/{id}/comments', 'CommentsController@store')->where('id', '[0
 Route::get('/register', 'RegistrationController@create');
 Route::post('/register', 'RegistrationController@store');
 
-Route::get('/login', 'SessionsController@create');
-Route::get('/logout', 'SessionsController@destroy');
+Route::get('/login', 'SessionsController@create')->name('login');
+Route::get('/logout', 'SessionsController@destroy')->name('logout');

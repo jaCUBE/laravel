@@ -22,9 +22,8 @@
       <div class="card-footer text-muted">
         Posted on
         <span title="{{ $post->created_at }}">
-          {{ $post->created_at->toFormattedDateString() }} by
+          {{ $post->created_at->toFormattedDateString() }} by {{ $post->user->name }}
         </span>
-        <a href="#">laravel.placeholder</a>
       </div>
     </div>      
   @endforeach
