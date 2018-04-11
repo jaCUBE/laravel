@@ -1,4 +1,4 @@
-  @if($errors->any())
+@if($errors->any())
   <div class="form-group">
     <div class="alert alert-danger">
       <ul>
@@ -8,4 +8,4 @@
       </ul>
     </div>
   </div>
-  @endif
+@endif
