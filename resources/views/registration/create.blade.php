@@ -13,7 +13,7 @@
         </div>
 
         <div class="form-group">
-            <label for="email">Email:</label>
+            <label for="email">E-mail:</label>
             <input type="text" class="form-control" id="email" name="email" required>
         </div>
 
@@ -31,6 +31,6 @@
            <input type="submit" class="btn btn-primary" value="Register!">
         </div>
 
-        @include('layouts.errors');
+        @include('layouts.errors')
     </form>
 @endsection

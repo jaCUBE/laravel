@@ -12,9 +12,9 @@ Route::get('/tasks/{task}', 'TasksController@show');
 
 Route::post('/posts/{id}/comments', 'CommentsController@store')->where('id', '[0-9]+'); // ID as a number
 
-
 Route::get('/register', 'RegistrationController@create');
 Route::post('/register', 'RegistrationController@store');
 
 Route::get('/login', 'SessionsController@create')->name('login');
+Route::post('/login', 'SessionsController@store');
 Route::get('/logout', 'SessionsController@destroy')->name('logout');
