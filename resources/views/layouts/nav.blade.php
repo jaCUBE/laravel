@@ -10,10 +10,11 @@
 
         @if (Auth::check())
           <a class="nav-link" href="/posts/create">New Post</a>
-          <a class="nav-link" href="/logout">{{ Auth::user()->name }}</a>
+          <a class="nav-link pl-5" href="javascript:void(0)"><b>{{ Auth::user()->name }}</b></a>
+          <a class="nav-link" href="/logout"><small>(logout)</small></a>
         @else
           <a class="nav-link" href="/register">Register</a>
-          <a class="nav-link" href="/login">Login</a>
+          <a class="nav-link pl-5" href="/login">Login</a>
         @endif;
       </ul>
     </div>

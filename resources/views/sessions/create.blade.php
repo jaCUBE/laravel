@@ -1,5 +1,6 @@
 @extends('layouts.master')
 
+<?php // dd($errors) ?>
 
 @section('content')
     <h1>Login</h1>
